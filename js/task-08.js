@@ -10,10 +10,16 @@ function formSubmit(e) {
     const email = emailInput.value;
     const password = passwordInput.value;
 
-    console.log("Email:", email);
-    console.log("Password:", password);
-
     if (email === '' || password === '') {
         alert('Всі поля повинні бути заповнені');
-    } 
-}
+        return; // Прерываем выполнение функции, так как поля не заполнены
+    }
+
+    const formData = {
+        email: email,
+        password: password,
+    };
+
+    console.log(formData);
+
+}    
